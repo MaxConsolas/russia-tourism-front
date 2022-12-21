@@ -15,7 +15,14 @@ const router = createRouter({
       name: 'Tours',
       component: ToursView
     },
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+      }
+    }
+  }
 })
 
 export default router

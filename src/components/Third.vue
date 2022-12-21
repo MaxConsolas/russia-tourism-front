@@ -1,5 +1,6 @@
 <template>
-  <div class="mainpage-container" id="popular">
+  <div class="mainpage-container">
+    <div id="popular" style="top: -100px; position: relative;"></div>
     <div class="mainpage">
       <div class="responsive-container">
         <h6>Популярное</h6>
@@ -14,17 +15,21 @@
             </div>
           </div>
           <div class="down">
-            <div
-              v-for="tour in popular"
+            <template 
+              v-for="(tour, index) in popular"
               :key="tour.id"
-              class="tour-card"
-              :style="'background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(http://russia-tourism/storage/'+tour.image+')'"
             >
-              <div class="bottom">
-                <div class="title">{{ tour.title }}</div>
-                <div class="cities">{{ tour.start_city.title }} &mdash; {{ tour.finish_city.title }}</div>
+              <div
+                v-if="index < 4"
+                class="tour-card"
+                :style="'background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(http://russia-tourism/storage/'+tour.image+')'"
+              >
+                <div class="bottom">
+                  <div class="title">{{ tour.title }}</div>
+                  <div class="cities">{{ tour.start_city.title }} &mdash; {{ tour.finish_city.title }}</div>
+                </div>
               </div>
-            </div>
+            </template>
           </div>
         </div>
       </div>

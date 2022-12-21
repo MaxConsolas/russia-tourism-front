@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer" id="footer">
     <div class="responsive-container">
         <div class="content-container">
           <div class="left">
@@ -18,10 +18,14 @@
           <div class="right">
             <div class="menu">
               <div class="menu-el">
-                Туры
+                <router-link to="/tours">
+                  Туры
+                </router-link>
               </div>
               <div class="menu-el">
-                Популярное
+                <router-link to="/#popular">
+                  Популярное
+                </router-link>
               </div>
               <div class="menu-el">
                 О нас
@@ -30,7 +34,9 @@
                 Отзывы
               </div>
               <div class="menu-el">
+                <a href="#footer">
                 Контакты
+                </a>
               </div>
             </div>
           </div>
@@ -48,9 +54,6 @@ export default {
     };
   },
   methods: {
-    gotoPopular() {
-      document.getElementById('popular').scrollIntoView();
-    }
   },
   created() {
   },

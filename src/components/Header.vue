@@ -7,10 +7,17 @@
       <div class="menu-container">
         <div class="menu">
           <div class="menu-element">
-            Туры
+            <router-link to="/tours">
+              Туры
+            </router-link>
           </div>
           <div class="menu-element">
-            Популярное
+            <router-link :to="{
+              name: 'home',
+              hash: '#popular'
+          }">
+              Популярное
+            </router-link>
           </div>
           <div class="menu-element">
             О нас
@@ -19,7 +26,9 @@
             Отзывы
           </div> -->
           <div class="menu-element">
-            Контакты
+            <a href="#footer">
+              Контакты
+            </a>
           </div>
           <div class="menu-element lens">
           </div>
