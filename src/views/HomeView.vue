@@ -2,8 +2,7 @@
   <main>
     <First/>
     <Second/>
-    <Third/>
-    <Footer/>
+    <Third :tours="tours"/>
   </main>
 </template>
 
@@ -22,11 +21,15 @@ export default {
   },
   data() {
     return {
+      tours: [],
     };
   },
   methods: {
   },
   created() {
+    fetch('http://russia-tourism/api/tours')
+      .then((response) => response.json())
+      .then((data) => this.tours = data.tours)
   },
   mounted() {
 

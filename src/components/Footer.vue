@@ -48,6 +48,9 @@ export default {
     };
   },
   methods: {
+    gotoPopular() {
+      document.getElementById('popular').scrollIntoView();
+    }
   },
   created() {
   },

@@ -100,6 +100,26 @@ header {
       }
     }
 
+    &.black {
+      .menu-element {
+        color: black !important;
+      }
+      
+      .logo {
+        height: 40px;
+        width: 106px;
+        background: center / contain no-repeat url('img/logo_black.svg') !important;
+        cursor: pointer;
+      }
+  
+      .lens {
+        height: 20px;
+        width: 20px;
+        background: center / contain no-repeat url('img/lens_black.svg') !important;
+        cursor: pointer;
+      }
+    }
+
   }
 }
 
@@ -113,6 +133,8 @@ header {
   background-attachment: fixed;
   background-size: cover;
   color: white;
+  margin-bottom: 200px; 
+
 
   .firstpage-container {
     display: inline-flex;
@@ -158,13 +180,15 @@ header {
     font-family: 'Open Sans', sans-serif;
     font-size: 20;
   }
+
+  
 }
 
 .mainpage-container {
-  height: 100vh;
+  min-height: 100vh;
 
   .mainpage {
-    margin: 200px 0;
+    margin-bottom: 200px; 
     .vertical-content {
       width: 100%;
       display: inline-flex;
@@ -318,4 +342,70 @@ header {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.tour-list {
+  margin-top: 140px;
+  display: inline-flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  .card {
+    height: 412px;
+    width: 330px;
+    color: black;
+    background-position: top center;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .hover-link {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 330px;
+      height: 250px;
+      opacity: 0;
+      font-size: 18px;
+      color: white;
+      text-decoration: underline;
+      background-color: rgba(0, 0, 0, 0.33);
+      cursor: pointer;
+      transition: opacity 0.33 ease-out;
+
+      &:hover {
+        transition: opacity 0.33 ease-out;
+        opacity: 1;
+
+      }
+    }
+    
+    .bottom {
+      background-color: #F8F8F8;
+      height: 162px;
+      padding: 28px 24px 22px 24px;
+
+      .title {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 18px;
+      }
+  
+      .cities {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+  
+      .date {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        .icon {
+          background:  center / cover url('@/assets/img/calendar.svg');
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
 }

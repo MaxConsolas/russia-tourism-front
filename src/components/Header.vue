@@ -1,10 +1,9 @@
 <template>
   <header>
-    <div class="header-container">
+    <div class="header-container" :class="addclass">
       <div class="logo-container">
         <div class="logo"></div>
       </div>
-
       <div class="menu-container">
         <div class="menu">
           <div class="menu-element">
@@ -32,6 +31,11 @@
 
 <script>
 export default {
+  props: {
+    addclass: {
+      default: '',
+    }
+  },
   components: {
   },
   data() {
