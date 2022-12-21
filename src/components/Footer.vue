@@ -28,7 +28,9 @@
                 </router-link>
               </div>
               <div class="menu-el">
-                О нас
+                <router-link :to="'/#about'">
+                  О нас
+                </router-link>  
               </div>
               <div class="menu-el">
                 Отзывы

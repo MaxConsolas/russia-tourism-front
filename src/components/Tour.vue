@@ -32,7 +32,7 @@ export default {
   methods: {
     toLocale(date) {
       moment.locale('ru');
-      return moment(date).format('d MMMM');
+      return moment(date).format('dd MMMM');
     },
   },
   created() {

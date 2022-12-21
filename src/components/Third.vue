@@ -9,10 +9,12 @@
             <h3>Предлагаем посетить <span class="h-blue">самые</span><br/>
               <span class="h-blue">актуальные маршруты страны</span>
             </h3>
-            <div class="goto">
-              <span>Посмотреть все маршруты</span>
-              <div class="arrow-right"></div>
-            </div>
+            <router-link :to="'/tours'">
+              <div class="goto">
+                  <span>Посмотреть все маршруты</span>
+                  <div class="arrow-right"></div>
+              </div>
+            </router-link>
           </div>
           <div class="down">
             <template 

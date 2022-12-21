@@ -15,12 +15,17 @@
             <router-link :to="{
               name: 'home',
               hash: '#popular'
-          }">
+            }">
               Популярное
             </router-link>
           </div>
           <div class="menu-element">
-            О нас
+            <router-link :to="{
+              name: 'home',
+              hash: '#about'
+            }">
+              О нас
+            </router-link>
           </div>
           <!-- <div class="menu-element">
             Отзывы

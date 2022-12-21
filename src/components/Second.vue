@@ -1,5 +1,6 @@
 <template>
   <div class="mainpage-container">
+    <div id="about" style="top: -100px; position: relative;"></div>
     <div class="mainpage">
       <div class="responsive-container">
         <h6>О нас</h6>
