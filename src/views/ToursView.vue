@@ -17,6 +17,7 @@
 <script>
 import Header from '@/components/Header.vue';
 import Tour from '@/components/Tour.vue';
+import { mapState } from 'vuex';
 
 export default {
   components: {
@@ -25,16 +26,14 @@ export default {
   },
   data() {
     return {
-      tours: [],
     };
   },
   methods: {
   },
-  created() {
-    fetch('http://russia-tourism/api/tours')
-      .then((response) => response.json())
-      .then((data) => this.tours = data.tours)
-  },
+  computed: mapState({
+    tours: 'tours',
+  }),
+
   mounted() {
 
   },

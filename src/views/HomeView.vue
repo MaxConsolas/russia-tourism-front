@@ -11,6 +11,7 @@ import First from '@/components/First.vue';
 import Second from '@/components/Second.vue';
 import Third from '@/components/Third.vue';
 import Footer from '@/components/Footer.vue';
+import { mapState } from 'vuex';
 
 export default {
   components: {
@@ -21,15 +22,15 @@ export default {
   },
   data() {
     return {
-      tours: [],
     };
   },
   methods: {
   },
+  computed: mapState({
+    tours: 'tours',
+  }),
   created() {
-    fetch('http://russia-tourism/api/tours')
-      .then((response) => response.json())
-      .then((data) => this.tours = data.tours)
+
   },
   mounted() {
 

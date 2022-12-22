@@ -3,7 +3,7 @@
   class="card"
   :style="'background-image: url(http://russia-tourism/storage/'+tour.image+')'"
 >
-  <div class="hover-link">
+  <div class="hover-link" @click="setTour(tour)">
     <div class="hover-link-text">
       Оставить заявку
     </div>
@@ -19,6 +19,8 @@
 
 <script>
 import moment from 'moment';
+import 'moment/locale/ru';
+
 export default {
   props: ['tour'],
   components: {
@@ -32,7 +34,10 @@ export default {
   methods: {
     toLocale(date) {
       moment.locale('ru');
-      return moment(date).format('dd MMMM');
+      return moment(date).locale('ru').format('DD MMMM');
+    },
+    setTour(tour) {
+      this.$store.commit('setTour', tour);
     },
   },
   created() {

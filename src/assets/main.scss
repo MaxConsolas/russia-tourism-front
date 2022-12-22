@@ -414,3 +414,141 @@ header {
     }
   }
 }
+
+.popup-container {
+  width:100%;
+  height: 2000px;
+  background-color: rgba(0,0,0,0.5);
+  overflow:hidden;
+  position:fixed;
+  top:0px;
+
+  .popup {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 750px;
+    width: 1000px;
+    padding: 75px 90px;
+    margin:100px auto auto auto;
+
+    h3 {
+      margin-bottom: 24px;
+    }
+  
+    input {
+      background-color: white;
+      border: 1px black solid;
+      width: 360px;
+      height: 52px;
+
+      &::placeholder {
+        font-size: 16px;
+        color: #a3a3a3;
+        padding-left: 28px;
+    }
+    }
+  
+    .inputs {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 32px;
+    }
+
+    .left {
+      display: inline-flex;
+      flex-direction: column;
+
+      .goto {
+        margin-top: 42px;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        gap: 25px;
+        font-size: 18px;
+        max-width: 220px;
+
+        .arrow-right {
+          width: 40px;
+          height: 14px;
+          background-image: url('@/assets/img/arrow.svg');
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+  
+    .right {
+      display: inline-flex;
+      align-items: center;
+
+      .selected-tour-label {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .card {
+        height: 412px;
+        width: 330px;
+        color: black;
+        background-position: top center;
+        background-origin: border-box;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        .hover-link {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 330px;
+          height: 250px;
+          opacity: 0;
+          font-size: 18px;
+          color: white;
+          text-decoration: underline;
+          background-color: rgba(0, 0, 0, 0.33);
+          cursor: pointer;
+          transition: opacity 0.33 ease-out;
+    
+          // &:hover {
+          //   transition: opacity 0.33 ease-out;
+          //   opacity: 1;
+    
+          // }
+        }
+        
+        .bottom {
+          background-color: #F8F8F8;
+          height: 162px;
+          padding: 28px 24px 22px 24px;
+    
+          .title {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 18px;
+          }
+      
+          .cities {
+            font-size: 16px;
+            margin-bottom: 16px;
+          }
+      
+          .date {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            .icon {
+              background:  center / cover url('@/assets/img/calendar.svg');
+              width: 14px;
+              height: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

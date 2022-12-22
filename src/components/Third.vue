@@ -24,6 +24,7 @@
               <div
                 v-if="index < 4"
                 class="tour-card"
+                @click="setTour(tour)"
                 :style="'background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(http://russia-tourism/storage/'+tour.image+')'"
               >
                 <div class="bottom">
@@ -55,6 +56,9 @@ export default {
     },
   },
   methods: {
+    setTour(tour) {
+      this.$store.commit('setTour', tour);
+    },
   },
   created() {
   },
